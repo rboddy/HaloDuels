@@ -15,18 +15,24 @@ class Weapon:
         print(self.ammo_count)
 
     def reload_weapon(self):
-        self.ammo_count = self.max_ammo
+        if self.ammo_count != self.max_ammo:
+            self.ammo_count = self.max_ammo
+        else:
+            print("Magazine full")
 
 
 battle_rifle = Weapon("Battle Rifle", 21, "3 round burst", 21)
 battle_rifle.pickup_weapon()
-clicks = 0
-while clicks < 7:
-    battle_rifle.fire_weapon()
-    clicks += 1
+# clicks = 0
+# while clicks < 7:
+#    battle_rifle.fire_weapon()
+#    clicks += 1
 
-battle_rifle.reload_weapon()
-print(battle_rifle.ammo_count)
+# battle_rifle.reload_weapon()
+# print(battle_rifle.ammo_count)
+
+assault_rifle = Weapon("Assault Rifle", 30, "automatic", 30)
+assault_rifle.pickup_weapon()
 
 
 
